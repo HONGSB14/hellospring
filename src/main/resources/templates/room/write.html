@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:replace="header.html :: header" ></div>
+
+
+<p>이곳은 등록페이지 입니다!!</p>
+    <form id="saveform">
+            이름:<input type="text" name="rname" id="rname">
+            <br>
+            지역:<input type="text" id="sample5_address" placeholder="주소">
+                    <input type="button" onclick="sample5_execDaumPostcode()" value="주소 검색"><br>
+                    <div id="map" style="width:300px;height:300px;margin-top:10px;display:none"></div>
+                    <input type="hidden" name="x" id="x">
+                    <input type="hidden" name="y" id="y">
+            첨부자료:<input type="file" multiple="multiple" name="rimg" id="rimg">
+            <br>
+        <button type="button" onclick="save()">등록하기</button>
+    </form>
+
+
+<div th:replace="footer.html :: footer" ></div>
+<script type="text/javascript" src="/js/room/write.js"></script>
+</body>
+</html>

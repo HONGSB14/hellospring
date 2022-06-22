@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:replace="header.html ::header"></div>
+<div class="container">
+        <div class="col-md-12 py-5">
+        <form id="writeForm">
+            <div class="row py-3">
+                <div class="col-md-1">
+                    작성자 :
+                </div>
+                <div class="col-md-5">
+                    <input  class="form-control" type="text" name="bwriter">
+                </div>
+                <div class="col-md-1">
+                    비밀번호 :
+                </div>
+                <div class="col-md-5">
+                    <input  class="form-control" type="password" name="bpwd">
+                </div>
+            </div>
+
+           <div class="row py-3">
+                <div class="col-md-1">
+                    제목 :
+                </div>
+                <div class="col-md-11">
+                    <input  class="form-control" type="text" name="btitle">
+                </div>
+            </div>
+
+            <div class="row py-3">
+                <div class="col-md-1">
+                    내용 :
+                </div>
+                <div class="col-md-11">
+                    <textarea class="form-control" name="bcontent" rows="5" col="5"></textarea>
+                </div>
+            </div>
+
+            <div class="offset-10 col-md-2">
+                <button class="form-control" type="button" onclick="boardWrite()">글 작성</button>
+            </div>
+
+        </form>
+        </div>
+</div>
+<script src="/js/board/write.js"></script>
+</body>
+</html>
